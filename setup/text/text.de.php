@@ -12,6 +12,7 @@ $txt['s_einfuehrung']		= "Willkommen zum eTempus-Setup. Das Setup-Programm wird 
 $txt['l_ftp_host']			= "FTP-Host";
 $txt['l_ftp_login']			= "FTP-Username";
 $txt['l_ftp_pass']			= "FTP-Passwort";
+$txt['l_ftp_path']			= "FTP Verzeichnis";
 $txt['db_typ']				= "Datenbanktyp";
 $txt['mysql']				= "MySQL (Schnell, ben&ouml;tigt Mysql-Server mit Username & Passwort)";
 $txt['sqlite']				= "SQLite ( Keine weitere Einrichtung n&ouml;tig, langsamer als MYSQL)";

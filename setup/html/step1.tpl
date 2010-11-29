@@ -7,8 +7,8 @@
 <hr/>
 <h3>{db_typ}</h3>
 {db_warn}<br /><br />
-<input type="radio" {chk_sqlite} name="dbtype" value="sqlite" onclick="$('mysql_acc').style.display='none';">{sqlite}<br />
-<input type="radio" {chk_mysql} name="dbtype" value="mysql" onclick="$('mysql_acc').style.display='block';">{mysql}:
+<input type="radio" {chk_sqlite} name="dbtype" value="sqlite" onclick="$('#mysql_acc').css('display','none');">{sqlite}<br />
+<input type="radio" {chk_mysql} name="dbtype" value="mysql" onclick="$('#mysql_acc').css('display','block');">{mysql}:
 <div id="mysql_acc" style="display:none;background-color:#E3E3E3;">
 	<table>
 		<tr>
@@ -36,8 +36,8 @@
 <h3>{dateirechte}</h3>
 {rights_w}
 <br /><br />
-<input type="radio" name="right" {chk_manual} value="manual" onclick="$('ftp_acc').style.display='none';">{manual_r}<br />
-<input type="radio" name="right" {chk_ftp} value="ftp" onclick="$('ftp_acc').style.display='block';">{ftp_r} :
+<input type="radio" name="right" {chk_manual} value="manual" onclick="$('#ftp_acc').css('display','none');">{manual_r}<br />
+<input type="radio" name="right" {chk_ftp} value="ftp" onclick="$('#ftp_acc').css('display','block');">{ftp_r} :
 <div id="ftp_acc" style="display:none;background-color:#E3E3E3;">
 	<table>
 		<tr>
@@ -52,6 +52,10 @@
 		<tr>
 			<td style="padding-left:15px;">{l_ftp_pass}:</td>
 			<td><input type="password" name="ftp_pass" autocomplete="off" /></td>
+		</tr>
+		<tr>
+			<td style="padding-left:15px;">{l_ftp_path}:</td>
+			<td><input type="text" name="ftp_path" value="/httpdocs" /></td>
 		</tr>
 	</table>	
 </div>

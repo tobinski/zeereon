@@ -5,7 +5,7 @@
 		<meta name="copyright" content="copyright 2009 www.protagonist.ch" />
 		<meta name="description" content="eTempus Setup" />
 		<title>eTempus Setup</title>
-		<script type="text/javascript" language="javascript" src="../js/mootools-1.2.1-core-yc.js"></script>
+		<script type="text/javascript" language="javascript" src="../js/jquery.js"></script>
 
 		<style type="text/css">
 				body,html { font-family: sans-serif;

@@ -231,11 +231,16 @@ class etempus_setup {
 				$mode=ET_SETUP_FTP_CHMODE;
 				
 				//bei ftp-server einloggen
-				$ftpstream = @ftp_connect($_SESSION['ftp_host']);
-				$ftp_l = @ftp_login($ftpstream, $_SESSION['ftp_login'], $_SESSION['ftp_pass']);
+				$ftpstream = ftp_connect($_SESSION['ftp_host']);
+				$ftp_l = ftp_login($ftpstream, $_SESSION['ftp_login'], $_SESSION['ftp_pass']);
 				$ret=array();
 				
 				//etempus-dateien suchen
+				/** 
+				* TODO:
+				- Anpaasen, dass es mit mehreren Unterverzeichnissen funktioniert
+				**/
+				/*
 				$root_list = explode("/",$_SERVER["DOCUMENT_ROOT"]);
 				$ftplist = ftp_nlist($ftpstream,".");
 				if (!empty($ftplist)){
@@ -243,7 +248,8 @@ class etempus_setup {
 								if (!empty($root_list)){
 										foreach ($root_list as $root_path){
 												if ($root_path==$folder){
-														$res = $folder;
+														echo $folder;
+														$res= $folder;
 												}
 										}
 								}
@@ -257,24 +263,26 @@ class etempus_setup {
 				preg_match("/\/{$res}(.*)/is",$_SERVER["DOCUMENT_ROOT"],$res1);
 				$ret['fname']=$res1[0];
 				$ret['list']="";
-				
+				*/
 				//rechte setzen
+				$path = $_REQUEST['ftp_path'];
+				$res1[0] = $path;
 				$w_files=$this->files_right();
 				foreach ($w_files as $file){
 						
 						//wenn datei
 						if (is_file("../".$file)){
-								$r2 = @ftp_site($ftpstream, "CHMOD $mode {$res1[0]}/{$file}");
+								$r2 = ftp_site($ftpstream, "CHMOD $mode {$res1[0]}/{$file}");
 						}
 						
 						//wenn ordner
 						if (is_dir("../".$file)){
-								$r1 = @ftp_site($ftpstream, "CHMOD $mode {$res1[0]}/{$file}");
+								$r1 = ftp_site($ftpstream, "CHMOD $mode {$res1[0]}/{$file}");
 								$arr=$this->listdir("../".$file);
 								foreach ($arr as $subitem){
 										$subitem=str_replace("//","/",$subitem);
 										$subitem=str_replace("../","",$subitem);
-										$r2 = @ftp_site($ftpstream, "CHMOD $mode {$res1[0]}/{$subitem}");
+										$r2 = ftp_site($ftpstream, "CHMOD $mode {$res1[0]}/{$subitem}");
 								}						
 						}
 						
@@ -282,7 +290,6 @@ class etempus_setup {
 				}
 				return $ret;
 		}
-		
 		
 
 		/*******************************
