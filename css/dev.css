@@ -1,0 +1,221 @@
+
+		
+			noscript {
+				font-size:25px;
+				color:red;
+				font-weight:bold;
+				padding:90px;
+			}
+			
+			
+			
+			#alphabet_cont { margin: 10px; margin-top:20px; font-size:14px; font-weight:bold; }
+			
+			#pm_last, #pm_most { cursor:pointer; width:15px;display:block;float:left; }
+			
+			
+			#k_list .kunde { display:block; font-weight:bold; font-size:12px; overflow:hidden; width:275px; height: 15px;  }
+			#k_list .projekt { padding-left:15px; font-size:12px; }
+			#k_list .link {font-size:12px;font-weight:normal;  }
+			#k_list .name {  }
+			
+			
+			#k_list .klist_spacer { height:10px;  }
+			#k_list a { text-decoration:none; color:black; }
+			#k_list a:hover { text-decoration:underline;color:gray }
+			
+			
+			#tree div.most_last { float:left; font-weight:bold; }
+			#tree div.most_last_k { float:left; margin-left: 5px; }
+			#tree div.most_last_a {  display:block; width:270px; height: 15px; overflow:hidden; margin:4px; cursor:pointer; }
+			
+			#tree div.kunde img.link, #tree div.projekt img.link, #tree div.totop img.link{ vertical-align:middle; margin-right:3px; }
+			#tree div.totop {
+					font-size:125%;
+					font-weight:bold;
+					color:#00ACEF;/*text-align:right;*/
+			}
+			#tree div.totop img { float:right; }
+			
+			 
+			#tree div.active { background: #51B6E2;  }
+			#treeNewProject img {vertical-align:middle; } 
+			
+			
+			
+			#time { font-size: 20px; padding-top:28px; }
+			.link { cursor:pointer; }
+			
+			
+			div.msg table {
+				border:none;
+			}
+
+			#button_cancel p, #button_cancel span { float:left; }
+			#ask_cancel_time { margin-left:20px; }
+
+			
+			/*auswerten html in diesem fenster*/
+			#table_auswertung_html {
+					color:black;
+					border-spacing: 0px;
+					border: 1px solid black;
+					border-right: none;
+					border-bottom: none;
+					empty-cells:show;
+			}
+			#table_auswertung_html td {
+					border-right: 1px solid black;
+					border-bottom: 1px solid black;
+					padding:3px;
+			}
+			
+			
+
+
+			/******************************************
+				boxes , tables, und co
+			******************************************/
+
+			div.box_normal input {vertical-align:middle; }
+			
+			/*box zeit eintragen*/
+			div.box_inserttime {
+					border: 1px solid gray;
+					background-color:#D3D3D3;
+					padding:5px;
+			}
+			div.box_normal {
+				border: 1px solid #E9E9E9;
+				background-color:#fff;
+				margin-bottom:20px;
+				margin-top:10px;
+			}
+			div.box_normal h3{
+				background-color:#E9E9E9;
+				font-size:110%;
+				font-weight:bold;
+				padding:3px;
+			}
+			div.boxbox {
+				padding:5px;
+			}
+						
+			div.nachricht {
+				width:500px;
+				border: 1px solid black;
+				background-color:#FFFF99;
+				-moz-border-radius:9px;
+				padding:5px;
+				margin-bottom:10px;
+				float:right;
+			}
+			
+			div.warnung {
+				width:500px;
+				border: 1px solid black;
+				background-color:#FFC7C7;
+				-moz-border-radius:9px;
+				padding:5px;
+				margin-bottom:10px;
+				float:right;
+			}
+			
+			
+			/******************************************
+			 * 
+			 * tabelle editierbar letzte einträge
+			 * & universal-tabelle struct
+			 *
+			 *****************************************/
+			
+			/*div über alles*/
+			#last_ones {
+					margin-top:30px;
+					margin-left:20px;
+			}
+			
+			/*tabelle*/
+			#table_place_zeit table, #table_place_beleg table , table.struct {
+					width:100%;
+					border-spacing:0;
+			}
+			
+			/*titel tabelle*/
+			#table_place_zeit th, #table_place_beleg th, table.struct th{
+				background:#EFEFEF;
+				border-bottom: 1px solid #D7D5D5; 
+				border-top: 1px solid #D7D5D5;  
+				border-left: 1px solid #D7D5D5;  
+				padding:6px; 
+			}
+			
+			/* reihe tabelle*/
+			#table_place_zeit tr td, #table_place_beleg tr td, table.struct tr td{
+				border-bottom: 1px solid #D7D5D5;  
+				padding:4px; 
+			}
+			
+			
+			/* kein umbruch bei tabellenzeilen*/
+			#table_zeit td, #table_place_beleg td, table.struct td{
+				white-space: nowrap; 
+			}
+			
+			/*helle datenreihe*/
+			#table_place_zeit tr.light, #table_place_beleg tr.light, table.struct tr.light{ 
+				background:white; 
+			}
+			
+			/*dunkle datenreihe*/
+			#table_place_zeit tr.dark, #table_place_beleg tr.dark, table.struct tr.dark{ 
+				background:#F8F8F8 
+			}
+			
+			/*reihe tagestotal*/
+			#table_place_zeit tr.total {
+				height:28px;
+				font-weight:bold;
+			}
+			
+			/*bei hover über nicht aktives item*/
+			#table_place_zeit tr.light:hover, #table_place_zeit tr.dark:hover,
+			#table_place_beleg tr.light:hover, #table_place_beleg tr.dark:hover,
+			table.struct tr.light:hover, table.struct tr.dark:hover {
+				background:#EFEFEF;
+			}
+			
+			/*ausgwählter eintrag*/
+			#table_place_zeit tr.selected, #table_place_zeit tr.selected:hover,
+			#table_place_beleg tr.selected, #table_place_beleg tr.selected:hover,
+			table.struct tr.selected, table.struct tr.selected:hover{
+				background: #FFECBB;
+			}
+			
+			/*edit: style der input-dinger*/
+			#table_zeit input , #table_place_beleg input{
+					background: inherit;
+					border:1px solid #D7D5D5;
+			}
+			#table_zeit select , #table_place_beleg select{
+					font-size:10px;
+			}
+			
+			#table_zeit input.error, #table_beleg input.error {
+				border:1px dotted red;
+			}
+			
+			/*editieren: eingabefeld datum*/
+			#table_edit_date {
+				width:75px;
+			}
+			
+			/*edit: eingabefeld kommentar*/
+			#table_edit_comment {
+				width:300px;
+			}
+		
+			/*frage bei tabelle letzte einträge */
+			#last_ones #question {
+				margin-top:20px;
+			}

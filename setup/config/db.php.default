@@ -1,0 +1,34 @@
+<?php
+/**************************************************
+ * 
+ * eTempus datenbank-konfiguration
+ * (c) 2009 cyrill v.wattenwyl, protagonist gmbh
+ * 
+ * ************************************************/
+class etempus_db_config {
+		
+		/*
+		 * dsn-array
+		 * mehr unter: http://pear.php.net/manual/de/package.database.db.intro-dsn.php
+		 */
+		public $dsn = array(	'phptype'  => "{dbtype}",
+								'mode'	   => {db_mode},
+								'dbsyntax' => false,
+								'username' => {db_user},
+								'password' => {db_pass},
+								'protocol' => false,
+								'hostspec' => {db_host},
+								'port'     => false,
+								'socket'   => false,
+								'database' => {db_db}								
+							);
+		
+		/*
+		 * optionen-array
+		 * mehr unter: http://pear.php.net/manual/de/package.database.db.db-common.setoption.php
+		 */
+		public $options = array('debug'       => 2,
+    							'portability' => DB_PORTABILITY_ALL,
+							   );
+}
+?>

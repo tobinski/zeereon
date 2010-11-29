@@ -1,0 +1,404 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Uniform design of standard content elements
+ * (de) Einheitliche Standardformatierungen für die wichtigten Inhalts-Elemente
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.2.1
+ * @revision        $Revision:392 $
+ * @lastmodified    $Date:2009-07-05 12:18:40 +0200 (So, 05. Jul 2009) $
+ * @appdef yaml
+ */
+
+@media all
+{
+/* ------------
+* #overall
+* Formatierung des Titels
+* ------------*/
+.titel img {
+      padding-right:3px;    
+}
+.titel h3 {
+      display:inline;
+      vertical-align:middle;
+      margin:0;
+      padding:0;
+}
+.titel {
+      height:34px;
+      vertical-align:middle;
+}
+/* ------------
+* #overall
+* Formatierung des Trenners
+* ------------*/
+.seperater {
+      margin-top:40px;
+      border-bottom:1px solid #cfcfcf;
+}
+.seperater h5 {
+      background-color:#f9f9fb;
+      width:80px;
+      margin-bottom:0;
+      padding:3px;
+}
+ 
+/* ------------
+* #col1
+* Formatierung des Trees
+* ------------*/
+#tree 
+{
+	overflow-y:scroll;
+	overflow-x:auto;
+	height:470px;
+	border:2px solid #9a9a9a;
+	border-right:0;
+	padding:14px;
+	margin-top:5px;
+}
+#tree h3
+{
+	font-size:110%;
+	font-weight:bold;
+	color:#00acef;
+}
+
+/* ------------
+* #col1 .tree
+* meist verwendete und Beliebteste
+* ------------*/
+
+#pm_last, #pm_most { 
+	cursor:pointer; 
+	width:15px;
+	display:block;
+	float:left; 
+}
+#tree div.most_last { float:left; font-weight:bold; }
+#tree div.most_last_k { float:left; margin-left: 5px; }
+#tree div.most_last_a {  display:block; width:275px; height: 15px; overflow:hidden; margin:4px; cursor:pointer; }
+
+/* ------------
+* #col1 .tree
+* Kundeliste in der linken Navigation und ABC zum Navigieren
+* ------------*/
+#alphabet_cont { 
+	margin: 10px; 
+	margin-top:20px; 
+	font-size:12px; 
+	font-weight:bold; 
+}
+#alphabet_cont a {
+	color:#00acef;
+}
+
+
+#k_list .kunde { 
+	display:block; 
+	font-weight:bold; 
+	font-size:12px; 
+	overflow:hidden; 
+	height: 15px;  
+}
+
+#k_list .kunde a, 
+#k_list .kunde a:hover,
+#k_list .kunde a:active,
+#k_list .kunde a:link,
+#k_list .kunde a:visited
+{ 
+	color:#222;
+}
+
+#k_list .projekt { 
+	padding-left:8px; 
+	font-size:10px; 
+}
+#k_list .projekt a,
+#k_list .projekt a:hover{ 
+	text-decoration:none;
+}
+
+#k_list .link {
+	 font-size:10px;
+	 font-weight:normal;  
+}
+
+#k_list .link a,
+#k_list .link a:visited,
+#k_list .link a:active,
+#k_list .link a:link{
+	color:#9A9A9A;
+	text-decoration:none;
+}
+
+#k_list .link a:hover {
+	border-bottom:1px dotted #9a9;
+}
+
+
+#k_list .name {  }
+
+#k_list .klist_spacer { 
+	height:8px;  
+}
+
+/*#k_list a { 
+	text-decoration:none; 
+	color:black; 
+}
+
+#k_list a:hover { 
+	text-decoration:underline;
+	color:gray;
+}*/
+
+
+/* ------------
+* #col1 .tree
+* new project
+* ------------*/
+#treeNewProject {
+	border-top:1px solid #9a9a9a;
+	border-bottom:1px solid #9a9a9a;
+	padding:10px 0;
+	color:#00acef;
+	}
+ #treeNewProject img {
+	margin-right:5px;
+	}
+#treeNewProject span {
+	vertical-align:middle;
+	display:inline;
+}
+#treeNewProject a {
+	color:#00ACEF;
+}
+/* ------------
+* #col3 Formular
+* Eingabefelder
+* ------------*/
+
+.date, .time {
+	width:80px;
+	}
+
+#comment {
+	width:98%;
+	}
+
+
+.subcolumns {
+	padding-bottom:5px;
+}
+.subcr {
+	padding-left:0;
+}
+.subcr img {
+	vertical-align:bottom;
+	padding:0 5px;
+}
+.subcl span,
+.subcl img{
+	vertical-align:middle;
+}
+.subcl {
+
+}
+
+.subcl .li-top{
+	vertical-align:top;
+}
+
+
+/* ------------
+* #col3 Timer
+* 
+* ------------*/
+#timeCounter {
+	background-color:#f2f7fa;
+	width:98%;
+	padding:5px;
+	}
+#timeCounter .subcl {
+	text-align:center;
+	border-right:2px solid #c5c6c8;
+	height:110px;
+	vertical-align:middle;
+	}
+#time { 
+	font-size: 20px; 
+}
+
+/*css entwicklung et*/
+		
+#last_proj_list, #most_proj_list {
+	
+}
+
+/* ------------
+* #topnav2
+* Topnavigation noch nicht fertig!
+* ------------*/
+#ttop { 
+	margin-top:60px; 
+	margin-left:40px;
+}
+#ttop a { 
+	-moz-box-shadow: 3px 3px 3px #CFCFCF;
+	-webkit-box-shadow: 3px 3px 3px #CFCFCF;
+        box-shadow: 3px 3px 3px #CFCFCF;
+	color:black;
+	display: block; 
+	border: 1px solid #CFCFCF; 
+	background:#eee; 
+	float:left; 
+	margin: 5px; 
+	padding: 5px;  
+	font-size:120%;
+	vertical-align:middle;
+}
+#ttop a span,
+#ttop a img {
+	vertical-align:middle;
+}
+
+#ttop a.active { 
+	font-weight:bold; 
+	background:#fff;
+}
+#ttop a:hover
+{
+	background:#fff;
+	text-decoration:none;
+}
+
+#ttop a
+
+
+
+#right { 
+	float:left; 
+	width: 560px; 
+	height:520px; 
+	margin-left:10px;
+	margin-top:30px;
+}
+
+.nodisp { display:none; }
+
+
+/* ------------
+* #topnav 
+* Bilder und Links 
+* 
+* ------------*/
+#topnav span,
+#topnav span img
+{
+	vertical-align:middle;
+}
+
+#topnav a {color:#00ACEF; font-weight: normal; background:transparent; text-decoration:none; }
+#topnav a:focus,
+#topnav a:hover,
+#topnav a:active { text-decoration:none; background-color: bold; }
+
+/* ------------
+* #col3 Errorhandling
+* Debuggind
+* 
+* ------------*/
+label.error {
+	color:red;
+	font-weight:bold;
+	margin-left:5px;
+}
+input.error , textarea.error {
+	border:1px dotted red;
+}
+div.msg table {
+	border:none;
+}
+#debugarea { 
+	position:absolute; 
+	left:0px; 
+	top:90px; 
+	width:250px; 
+	height:300px; 
+	border:1px solid black;
+	font-family:monospace; 
+	overflow: scroll; 
+	display:none; 
+}
+
+
+.link { cursor:pointer; }
+/* ------------
+* #col3 Boxes
+* Werden bnötigt um die Eigenschaften von Projekten zu editieren
+* ------------*/
+div.box_normal input {
+	vertical-align:middle; 
+}
+div.box_Normal {
+	width:80px;
+}
+/*box zeit eintragen*/
+div.box_inserttime {
+	border: 1px solid gray;
+	background-color:#D3D3D3;
+	padding:5px;
+}
+
+div.box_normal {
+	border: 1px solid #E9E9E9;
+	background-color:#fff;
+	margin-bottom:20px;
+	margin-top:10px;
+}
+
+div.box_normal h3 {
+	background-color:#E9E9E9;
+	font-size:110%;
+	font-weight:bold;
+	padding:3px;
+}
+
+div.boxbox {
+	padding:5px;
+}
+			
+div.nachricht {
+	width:500px;
+	border: 1px solid black;
+	background-color:#FFFF99;
+	-moz-border-radius:9px;
+	padding:5px;
+	margin-bottom:10px;
+}
+
+div.warnung {
+	width:500px;
+	border: 1px solid black;
+	background-color:#FFC7C7;
+	-moz-border-radius:9px;
+	padding:5px;
+	margin-bottom:10px;
+}
+
+.hidden {
+display:none;
+}
+
+
+}
+
