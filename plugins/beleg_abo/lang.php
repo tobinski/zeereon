@@ -25,7 +25,7 @@ $de['last']				=	"letzte Buchung";
 $de['abo_loeschen']		=	"dieses Abo l&ouml;schen";
 $de['abo_entry_update']	=	"Es wurden Abos gebucht. Die gebuchten Abos sind rot unterlegt.";
 $de['button_ok']		=	"ok";
-
+$de['zeitpunkt_buchen']		=	"Buchung ausführen am:";
 
 $en['einleitung'] 		= 	"In order that subscriptions are properly booked this page must be called either daily, <br />
 						   	 or be the Updater-Url has to be registred in a cronjob service. The Updater Url does not require a username / password! ";
@@ -52,6 +52,7 @@ $en['last'] 			= 	"last book";
 $en['abo_loeschen'] 	= 	"Delete this plan";
 $en['abo_entry_update'] = 	"Some subscriptions are have been booked. Booked subscriptions are marked red.";
 $en['button_ok'] 		= 	"ok";
+$en['zeitpunkt_buchen']		=	"start plan:";
 
 
 ?>

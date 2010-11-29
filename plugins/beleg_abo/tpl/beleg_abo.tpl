@@ -6,6 +6,17 @@
 			$('#delform').get(0).submit();
 		} else { return false; }
 	}
+	function actuel_date()
+	{
+		var datum = new Date();
+		return datum.getDate() + '.' + datum.getMonth() + '.' + datum.getYear();
+	}
+$(document).ready(function($) {
+  // Code using $ as usual goes here.
+/*	$('#date_start').val(actuel_date());*/
+	$('#date_start').datepicker( { showOn: 'button', buttonImageOnly: true, buttonImage: 'images/form_datepicker.png' });
+});
+
 </script>
 <table>
 	<tr>
@@ -53,9 +64,19 @@
 			<br /><br />
 			
 			<h4 style="margin-bottom:5px;">{erste_buchung}</h4>
-			<input type="radio" name="book_now" value="1" id="bn1" /><label for="bn1">{jetzt_buchen}</label>
-			<input type="radio" name="book_now" value="0" id="bn0" checked /><label for="bn0">{buche_spaeter}</label>
-			
+			<div class="subcolumns">
+			    <div class="c25l">
+			      <div class="subcl">
+			      <span>{zeitpunkt_buchen}</span>
+			      </div>
+			    </div>
+			    <div class="c75r">
+			      <div class="subcr">
+				  <input name="startDatum" class="date" id="date_start" value="" type="text">			
+			      
+			      </div>
+			    </div>
+			  </div>
 			<br /><br />
 			<input style="font-size:12px;font-weight:bold;" type="submit" value="{button_erstellen}" name="create_new" />
 		</div>
