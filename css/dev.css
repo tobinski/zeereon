@@ -5,6 +5,9 @@
 				color:red;
 				font-weight:bold;
 				padding:90px;
+				top:-1000px;
+				left:-1000px;
+				display:none;
 			}
 			
 			

@@ -164,7 +164,9 @@ class etempus_setup {
 
 				//dateien & datenbank erstellen
 				$this->make_db();
+				echo "test2";
 				$this->make_config_files();
+				echo "test3";
 				
 				$msg.=$this->info(__("step3_msg"));
 				

@@ -42,6 +42,9 @@
 								return true;
 						} 
 				}
+				//select=new Object();
+				//select.value="kunde";
+				//toggle_auswertung(select);
 		});
 
 </script>
@@ -49,9 +52,9 @@
 
 <h1>{auswerten}</h1>
 <form method="POST" onsubmit="auswertung_send(this);" id="ausw_form">
-<input type="radio" name="art" onchange="toggle_auswertung(this);" value="kunde" id="ausw_k" /><label for="ausw_k"> {auswertung_kunde}</label><br />
-<input type="radio" name="art" onchange="toggle_auswertung(this);" value="projekt" id="ausw_p" /><label for="ausw_p"> {auswertung_projekt}</label><br />
-<input type="radio" name="art" onchange="toggle_auswertung(this);" value="user" id="ausw_u" /><label for="ausw_u"> {auswertung_user}</label><br />
+<input type="radio" name="art" onclick="toggle_auswertung(this);" value="kunde" id="ausw_k" /><label for="ausw_k"> {auswertung_kunde}</label><br />
+<input type="radio" name="art" onclick="toggle_auswertung(this);" value="projekt" id="ausw_p" /><label for="ausw_p"> {auswertung_projekt}</label><br />
+<input type="radio" name="art" onclick="toggle_auswertung(this);" value="user" id="ausw_u" /><label for="ausw_u"> {auswertung_user}</label><br />
 
 	<div class="box_normal nodisp" id="typ_kunde">
 		<h3>1. {kunde_waehlen}</h3>

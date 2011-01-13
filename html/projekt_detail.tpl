@@ -38,7 +38,7 @@
 </div>
 
 
-<input type="button" id="subm" value="{button_speichern}" />
+<input type="submit" id="subm" value="{button_speichern}" />
 <input type="hidden" name="section" value="conf" />
 <input type="hidden" name="id" value="{id}" />
 <input type="hidden" name="step" value="2" />

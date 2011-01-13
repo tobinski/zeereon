@@ -46,7 +46,7 @@
 
 
 
-	<input type="button" id="subm" value="{button_erstellen}" />
+	<input type="submit" id="subm" value="{button_erstellen}" />
 	<input type="hidden" name="section" value="conf" />
 	<input type="hidden" name="function" value="kunde_projekt_neu_create" />
 </form>
