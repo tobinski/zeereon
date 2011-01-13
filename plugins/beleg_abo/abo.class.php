@@ -114,7 +114,7 @@ class et_beleg_abo extends etempus {
 		//
 		function create_new(){
 				if (!is_numeric($_REQUEST['betrag'])) { return __("beleg_nur_ganzzahl"); }
-				$now=time(mktime($_REQUEST['startDatum']));
+				$now=time(mktime((int)$_REQUEST['startDatum']));
 				switch ($_REQUEST['timespan']){
 						case "w":
 							$next = strtotime("+1 week",$now);
@@ -149,9 +149,9 @@ class et_beleg_abo extends etempus {
 				$desc=$this->getvar("desc",true);
 				$betrag=$this->getvar("betrag",true);
 				$q="INSERT INTO belge_abo VALUES (NULL,{$pid},{$betrag},{$now},{$diff},{$next},'{$ld}','','{$desc}');";
-				$user_id = 1;
-				$beleg_q="INSERT INTO beleg VALUES (NULL, {$pid}, '{$user_id}','$now','{$desc}','{$betrag}');";
-				$this->db->query($beleg_q);
+						$user_id = 1;
+						$beleg_q="INSERT INTO beleg VALUES (NULL, {$pid}, '{$user_id}','$now','{$desc}','{$betrag}');";
+						$this->db->query($beleg_q);
 				$this->db->query($q);
 				return true;
 		}
