@@ -121,7 +121,7 @@
 			<br /><br />
 			<b>{mwst}:</b>
 			<input type="checkbox" checked name="mwst" id="ll15" /> <label for="ll15">{mwst_mitrechnen}</label>
-			{mwst_satz}:<input type="text" name="mwst_satz" value="7.6" size="3" /> %
+			{mwst_satz}:<input type="text" name="mwst_satz" value="8" size="3" /> %
 			<br /><br />
 			<b>{sonstiges}:</b>
 			<input type="checkbox" checked name="r_beleg" id="ll33" /> <label for="ll33">{belege}</label> 
