@@ -1,0 +1,6 @@
+RewriteEngine Off
+AuthType Basic
+AuthName "eTempus"
+AuthUserFile /var/www/zeereon/.htpasswd
+ErrorDocument 401 "<h1>401 - eTempus- Zugriff verweigert</h1>eTempus kann nur mit einem gueltigen Login verwendet werden."
+require valid-user
