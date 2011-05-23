@@ -11,16 +11,17 @@ class etempus_db_config {
 		 * dsn-array
 		 * mehr unter: http://pear.php.net/manual/de/package.database.db.intro-dsn.php
 		 */
-		public $dsn = array(	'phptype'  => "mysql",
+		public $dsn = array(	
+								'phptype'  => "",
 								'mode'	   => false,
 								'dbsyntax' => false,
-								'username' => 'root',
-								'password' => 'safIer',
+								'username' => '',
+								'password' => '',
 								'protocol' => false,
-								'hostspec' => 'localhost',
+								'hostspec' => '',
 								'port'     => false,
 								'socket'   => false,
-								'database' => 'zeereon'								
+								'database' => ''								
 							);
 		
 		/*
