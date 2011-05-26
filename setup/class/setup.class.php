@@ -441,7 +441,7 @@ class etempus_setup {
 		function files_right(){
 				
 				//dateien
-				$w_files = array(".htaccess",".htpasswd","config/db.php","config/constants.php","plugins/oo_export/tmp");
+				$w_files = array(".htaccess",".htpasswd","config/db.php","config/constants.php","plugins/oo_export/tmp","plugins/oo_export_conf/img");
 				if ($_SESSION['dbtype']=="sqlite") array_push($w_files,"db/","db/".ET_SETUP_SQLITE_FILE);
 				if ($_SESSION['dbtype']=="mysql") array_merge($w_files,ET_SETUP_FOLDER."sql/mysql_tmp.sql");
 				if (ET_SETUP_DEL_FOLDER) array_push($w_files,"setup/");
