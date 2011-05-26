@@ -42,7 +42,7 @@
 			</tbody>
 		</table>
 		
-		<input type="submit" value="{edit}" onclick="etempus.kunde_edit.speichern();" />
+		<input type="button" value="{edit}" onclick="etempus.kunde_edit.speichern();" />
 		<input type="hidden" name="function" value="kunde_edit" />
 		<input type="hidden" name="section" value="conf" />
 		<input type="hidden" name="id" value="{id}" />
